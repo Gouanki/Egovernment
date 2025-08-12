@@ -1,10 +1,29 @@
+import { Link, usePage } from '@inertiajs/react';
 import React, { useState } from 'react';
 import { FiGlobe, FiMenu, FiSearch, FiUser } from 'react-icons/fi';
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState('English');
-    const navItems = ['Home', 'Services', 'About Us'];
+    const page = usePage();
+    console.log(page);
+    const currentUrl = page.url || page.props.url || window.location.pathname;
+    const navItems = [
+        {
+            name: 'Home',
+            link: '/',
+        },
+        {
+            name: 'About Us',
+        },
+        {
+            name: 'Services',
+            link: '/services',
+        },
+        {
+            name: 'Contact',
+        },
+    ];
     const languages = ['English', 'Español', 'Français'];
     const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedLanguage(e.target.value);
@@ -23,12 +42,13 @@ function Navbar() {
 
                 <div className="hidden items-center space-x-8 md:flex">
                     {navItems.map((item) => (
-                        <button
-                            key={item}
-                            className="transition-colors duration-200 hover:text-[#E0E4E8] hover:underline hover:decoration-2 hover:underline-offset-4"
+                        <Link
+                            href={item.link || '#'}
+                            className={`hover:bg-opacity-90 rounded-md px-3 py-2 transition-colors duration-200 ${currentUrl === item.link ? 'bg-[#2C5EA0]' : ''}`}
+                            key={item.name}
                         >
-                            {item}
-                        </button>
+                            {item.name}
+                        </Link>
                     ))}
                 </div>
 
@@ -66,9 +86,13 @@ function Navbar() {
             {isMenuOpen && (
                 <div className="mt-4 space-y-2 px-4 py-2 md:hidden">
                     {navItems.map((item) => (
-                        <button key={item} className="block w-full rounded-md px-4 py-2 text-left transition-colors duration-200 hover:bg-[#2C5EA0]">
-                            {item}
-                        </button>
+                        <Link
+                            href={item.link ?? '#'}
+                            key={item.name}
+                            className="block w-full rounded-md px-4 py-2 text-left transition-colors duration-200 hover:bg-[#2C5EA0]"
+                        >
+                            {item.name}
+                        </Link>
                     ))}
                     <button className="hover:bg-opacity-90 flex w-full items-center space-x-2 rounded-md bg-[#2C5EA0] px-4 py-2 transition-colors duration-200">
                         <FiUser className="h-5 w-5" />

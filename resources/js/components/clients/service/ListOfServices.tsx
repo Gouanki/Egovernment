@@ -1,125 +1,37 @@
 function ListOfServices() {
     return (
-        <div className="container bg-gray-50 px-6 py-20">
-            <h1 className="-mx-2 text-6xl font-bold text-black">🎓 Education</h1>
-            <div className="-mx-2 flex flex-wrap p-4 sm:mx-auto sm:mb-2 lg:w-4/5">
-                <div className="w-full p-2 sm:w-1/2">
-                    <div className="flex h-full items-center rounded bg-gray-100 p-4">
-                        <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="3"
-                            className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-500"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                            <path d="M22 4L12 14.01l-3-3"></path>
-                        </svg>
-                        <span className="font-medium">Africa</span>
+        <div className="flex min-h-screen items-start justify-center bg-gray-50">
+            <div className="mt-10 w-full max-w-5xl rounded-lg bg-white p-6 shadow-md">
+                <h1 className="mb-4 text-3xl font-bold text-gray-800">🎓 Education</h1>
+                <p className="mb-6 text-gray-600">Here you can find a list of all available services.</p>
+
+                {/* Example list of services */}
+                <div className="grid grid-cols-2 gap-5">
+                    <div>
+                        <ul className="space-y-4">
+                            <li className="mx-auto rounded-md bg-gray-100 p-2 font-bold text-black shadow-sm transition-colors hover:scale-95 hover:bg-gray-200">
+                                Service 1
+                            </li>
+                            <li className="mx-auto rounded-md bg-gray-100 p-2 text-black shadow-sm transition-colors hover:scale-95 hover:bg-gray-200">
+                                Service 2
+                            </li>
+                            <li className="mx-auto rounded-md bg-gray-100 p-2 text-black shadow-sm transition-colors hover:scale-95 hover:bg-gray-200">
+                                Service 3
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <div className="w-full p-2 sm:w-1/2">
-                    <div className="flex h-full items-center rounded bg-gray-100 p-4">
-                        <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="3"
-                            className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-500"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                            <path d="M22 4L12 14.01l-3-3"></path>
-                        </svg>
-                        <span className="font-medium">Antarctica</span>
-                    </div>
-                </div>
-                <div className="w-full p-2 sm:w-1/2">
-                    <div className="flex h-full items-center rounded bg-gray-100 p-4">
-                        <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="3"
-                            className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-500"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                            <path d="M22 4L12 14.01l-3-3"></path>
-                        </svg>
-                        <span className="font-medium">Asia</span>
-                    </div>
-                </div>
-                <div className="w-full p-2 sm:w-1/2">
-                    <div className="flex h-full items-center rounded bg-gray-100 p-4">
-                        <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="3"
-                            className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-500"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                            <path d="M22 4L12 14.01l-3-3"></path>
-                        </svg>
-                        <span className="font-medium">Australia (also known as Oceania)</span>
-                    </div>
-                </div>
-                <div className="w-full p-2 sm:w-1/2">
-                    <div className="flex h-full items-center rounded bg-gray-100 p-4">
-                        <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="3"
-                            className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-500"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                            <path d="M22 4L12 14.01l-3-3"></path>
-                        </svg>
-                        <span className="font-medium">Europe</span>
-                    </div>
-                </div>
-                <div className="w-full p-2 sm:w-1/2">
-                    <div className="flex h-full items-center rounded bg-gray-100 p-4">
-                        <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="3"
-                            className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-500"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                            <path d="M22 4L12 14.01l-3-3"></path>
-                        </svg>
-                        <span className="font-medium">North America</span>
-                    </div>
-                </div>
-                <div className="w-full p-2 sm:w-1/2">
-                    <div className="flex h-full items-center rounded bg-gray-100 p-4">
-                        <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="3"
-                            className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-500"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                            <path d="M22 4L12 14.01l-3-3"></path>
-                        </svg>
-                        <span className="font-medium">South America</span>
+                    <div>
+                        <ul className="space-y-4">
+                            <li className="rounded-scale-95 mx-auto bg-gray-100 p-2 font-bold text-black shadow-sm transition-colors hover:scale-3d hover:bg-gray-200">
+                                Service 1
+                            </li>
+                            <li className="rounded-scale-95 mx-auto bg-gray-100 p-2 text-black shadow-sm transition-colors hover:scale-3d hover:bg-gray-200">
+                                Service 2
+                            </li>
+                            <li className="rounded-scale-95 mx-auto bg-gray-100 p-2 text-black shadow-sm transition-colors hover:scale-3d hover:bg-gray-200">
+                                Service 3
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
